@@ -6,10 +6,11 @@ import None from "../Util/None"
 export default function Zine({ site, stuff }) {
   const { id } = useParams()
 
-  const post = stuff.filter(p => p.slug === id).shift()  
+  const post = stuff.filter(p => p.slug === id).shift()
 
-  if (!post) return <None />
+  if (!post) return <None />  
 
+  
   document.title = `${post.title} - ${site.metadata.name}`
 
   return (
@@ -24,7 +25,7 @@ export default function Zine({ site, stuff }) {
           {/* content thumbnail (optional) */}
           {post.thumbnail !== "" && <div aria-hidden="true" className="my-3" style={{ backgroundImage: `url(${post.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center center", height: "50vh", width: "100%" }}></div>}
 
-          {/* content proper */}          
+          {/* content proper */}
           <div className="mini-content text-center unreset" dangerouslySetInnerHTML={{ __html: post.content }}></div>
 
           {/* content metadata */}
