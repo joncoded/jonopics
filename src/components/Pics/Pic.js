@@ -11,7 +11,7 @@ export default function Pic({ site, stuff }) {
 
   if (!post) return <None />
 
-  document.title = `${post.title} - ${site.metadata.section_labels.pics} (${site.metadata.section_taglines.pics}) - ${site.metadata.name}`
+  document.title = `${post.title} - ${site.metadata.section_labels.pics} - ${site.metadata.name}`
 
   return (
     <main id="main" tabIndex="-1" className="w-screen">
