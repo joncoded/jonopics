@@ -23,7 +23,7 @@ export default function Zine({ site, stuff }) {
           <h2 className="mini-title text-center mb-6 text-3xl md:text-6xl">{post.title}</h2>
 
           {/* content thumbnail (optional) */}
-          {post.thumbnail !== "" && <div aria-hidden="true" className="my-3" style={{ backgroundImage: `url(${post.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center center", height: "200px" }}></div>}
+          {post.thumbnail !== "" && <div aria-hidden="true" className="my-3" style={{ backgroundImage: `url(${post.thumbnail})`, backgroundSize: "cover", backgroundPosition: "center center", height: "50vh", width: "100%" }}></div>}
 
           {/* content proper */}
           <div className="mini-content text-center unreset" dangerouslySetInnerHTML={{ __html: post.content }}></div>
@@ -31,9 +31,6 @@ export default function Zine({ site, stuff }) {
           {/* content metadata */}
           <p className="text-gray-600 dark:text-gray-200 mt-3 text-xs text-center">
             {post.metadata.date}
-            <span aria-hidden="true">&nbsp;&bull;&nbsp;</span>
-            <span className="sr-only">in</span>
-            {postType}
           </p>
         </div>
 
